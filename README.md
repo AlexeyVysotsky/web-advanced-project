@@ -7,3 +7,4 @@
 
 **Demo**:
 [Mounted] https://alexeyvysotsky.github.io/web-advanced-project/
+[![Build Status](https://travis-ci.org/AlexeyVysotsky/web-advanced-project.svg?branch=dev)](https://travis-ci.org/AlexeyVysotsky/web-advanced-project)
