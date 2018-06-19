@@ -1,0 +1,23 @@
+.blog-nav {
+  display: flex;
+  text-align: right;
+  width: 33%;
+  margin-right: 100px;
+  min-width: 200px;
+}
+
+.blog-nav__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-nav__link {
+  text-decoration: none;
+  color: $text-color;
+  display: block;
+  padding: 20px;
+  &:hover {
+    color: $green;
+    border-right: 2px solid $green;
+  }
+}
