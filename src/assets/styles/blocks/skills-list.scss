@@ -1,12 +1,28 @@
 .skills-list__item {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 37px;
-  margin-bottom: 37px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 37px;
+    margin-bottom: 37px;
 }
 
 .skills-list__title {
-  font-size: 28px;
-  font-weight: 500;
-  margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
 }

@@ -1,13 +1,12 @@
 .footer {
   width: 100%;
-  background: rgba(#373e42, .85);
-  color: rgba(#fff, .5);
+  background: rgba(#373e42, 0.85);
+  color: rgba(#fff, 0.5);
 }
 
 .footer-menu__link {
   color: inherit;
   text-decoration: none;
-
   &:hover {
     text-decoration: underline;
   }
@@ -24,11 +23,21 @@
 
 .footer__container {
   display: flex;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
-.footer__col-left, .footer__col-right {
+.footer__col-left,
+.footer__col-right {
   width: 50%;
-} 
+  @include tablets {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
 
 .footer__col-right {
   text-align: right;

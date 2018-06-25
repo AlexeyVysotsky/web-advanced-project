@@ -1,49 +1,56 @@
 .about {
-    position: relative;
+  position: relative;
 }
 
 .about__triangles {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
 }
 
 .about__cols {
-    display: flex;
-    height: 100%;
+  display: flex;
+  height: 100%;
+  @include tablets {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .about__col-left,
 .about__col-right {
-    width: 50%;
+  width: 50%;
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .about__col-left {
-    background: $white;
+  background: $white;
 }
 
 .about__right-title {
-    text-align: center;
+  text-align: center;
 }
 
 .about__left-title {
-    text-align: center;
-    margin-top: -50px;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-top: -50px;
+  margin-bottom: 30px;
 }
 
 .about__col-right {
-    background: $beige;
-    padding: 0 3%;
+  background: $beige;
+  padding: 0 3%;
 }
 
 .about__left-description {
-    padding: 0 10%;
+  padding: 0 10%;
 }
 
 .hero__menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }

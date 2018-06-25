@@ -1,57 +1,75 @@
 .welcome {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  padding: 25px 15px;
-  display: flex;
-  flex-direction: column; //text-align: center;
-  //align-items: center;
-  justify-content: space-between;
-  background: url("./assets/images/bg/auth-bg.jpg");
-  background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column; //text-align: center;
+    //align-items: center;
+    justify-content: space-between;
+    background: url("./assets/images/bg/auth-bg.jpg");
+    background-size: cover;
 }
 
 .welcome__registration {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .welcome__btn {
-  display: flex;
+    display: flex;
 }
 
 .welcome__salutation {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .welcome__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  overflow: hidden;
-  border: none;
-  background-color: $white;
-  opacity: 0.85;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: none;
+    background-color: $white;
+    opacity: 0.85;
 }
 
 .welcome__user {
-  padding: 30px 65px;
+    padding: 30px 65px;
+    display: flex;align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .welcome__menu {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 .welcome__copyright {
-  color: #fff;
-  font-weight: 300;
-  display: flex;
-  justify-content: center;
+    color: #fff;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-button {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 15px 30px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    background: transparent;
+    &:hover {
+        background: #fff;
+        color: $green;
+    }
 }

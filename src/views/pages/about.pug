@@ -4,6 +4,7 @@ block variables
   - var title = 'Обо мне'
 
 block scripts
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG5L0EZVL4Zlf9S2K3L2RQEZBoJKReXjQ&callback=initMap")
   script(src='about.bundle.js')
 
 block content
@@ -32,12 +33,12 @@ block content
           .about__right-title
             h2.subtitle Чем я могу быть вам полезен
           .about__right-desc.text-block
-            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
           .about__right-content
             #skills-container
                   
     section.section.map
-      #google-map
+      .google-map#google-map
       .map__contacts
         .contacts
           .contacts__title
@@ -53,3 +54,6 @@ block content
               li.contacts__item
                 .contacts__icon.contacts__icon_phone
                 .contacts__text +375 44 557-80-86
+              li.contacts__item
+                .contacts__icon.contacts__icon_map_marker
+                .contacts__text г. Минск, ул. Д. Сердича, д.11

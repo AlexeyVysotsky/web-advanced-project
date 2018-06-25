@@ -1,7 +1,16 @@
 .blog {
-    position: relative;
+    display: flex;
+    padding: 70px 0 150px;
 }
 
 .blog__content {
     display: flex;
+}
+
+.title-blog {
+    font-size: 60px;
+}
+
+.blog__content {
+    width: 95%;
 }
