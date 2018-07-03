@@ -1,0 +1,19 @@
+.down-btn__img {
+  width: 26px;
+  height: 16px;
+  fill: rgba(255, 255, 255, 0.5);
+  transition: 0.3s;
+  &:hover {
+    fill: #fff;
+    transition: 0.3s;
+  }
+}
+
+.arrow__down {
+  left: 0;
+  position: absolute;
+  right: 0;
+  bottom: 5%;
+  margin: 0 auto;
+  width: 26px;
+}

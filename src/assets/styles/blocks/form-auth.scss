@@ -1,0 +1,187 @@
+.authtorization {
+  height: 100%;
+}
+
+.form-auth {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-auth__edit {
+  padding: 0 20px;
+}
+
+.form-auth__checks {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-auth__row {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.form-auth__input {
+  border: none;
+  border-radius: 5px; // ignore
+  padding: 15px 20px 15px 60px;
+  background-color: #fff;
+  background-size: 20px 20px;
+  width: 100%;
+  border: 1px solid transparent; // ignore
+}
+
+.form-auth__input:focus {
+  border: 1px solid $green;
+}
+
+.form-auth__input--login {
+  background-color: #fff;
+  background: svg-load("login.svg", fill=$green) 15px 15px no-repeat;
+}
+
+.form-auth__input--password {
+  background-color: #fff;
+  background: svg-load("password.svg", fill=$green) 15px 15px no-repeat;
+}
+
+.form-auth__checks {
+  display: flex;
+}
+
+.form-auth__question {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-auth__btn {
+  display: flex;
+}
+
+.form-auth__button {
+  display: flex;
+  width: 50%;
+  background-color: rgba(22, 194, 170, 0.5);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0;
+  transition: 0.3s;
+  &:hover {
+    background-color: rgba(22, 194, 170, 0.3);
+    transition: 0.3s;
+  }
+}
+
+.form-auth__button--border-right {
+  border-right: 1px solid $green; // ignore
+}
+
+.form-auth-check {
+  position: relative;
+  white-space: nowrap;
+  margin-right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.form-auth-check__title {
+  font-size: 16px;
+}
+
+.form-auth-check__input {
+  display: none;
+}
+
+.form-auth-check__style {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: relative;
+  margin-right: 10px;
+  border: 1px solid $light-grey; // ignore
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: $green;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.form-auth-check__input:checked {
+  & + .form-auth-check__style {
+    &:after {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  & ~ .form-auth-check__title {
+    color: $green;
+  }
+}
+
+.form-auth-checkbox {
+  .form-auth-check__style {
+    border-radius: 0px;
+  }
+  .form-auth-check__input {
+    & + .form-radio__style {
+      &:after {
+        background: transparent;
+      }
+    }
+  }
+  .form-auth-check__input:checked {
+    & + .form-auth-check__style {
+      background: $green;
+      &:after {
+        background: svg-load("check.svg", fill=#fff) center center no-repeat /
+          contain;
+        background-size: contain;
+        width: 11px;
+        height: 9px;
+      }
+    }
+    & ~ .form-auth-check__title {
+      color: white;
+    }
+  }
+}
+
+.title__auth {
+  display: inline-block;
+  position: relative;
+  padding: 11px 70px;
+  font-family: "bernier", Times, serif;
+  font-size: 40px;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 5px;
+    background: rgba($grey, 0.2);
+  }
+  $margin: 35px;
+  &:before {
+    left: $margin;
+  }
+  &:after {
+    right: $margin;
+  }
+}

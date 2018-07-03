@@ -1,0 +1,30 @@
+section.hero.section
+  .hero__container
+    +image('./titles/portfolio-header.png', 'page title', 'title-img')
+    .user.hero__user
+      .user__pic-container
+        .user__pic
+          +image('./content/user.jpg', 'user pic', 'user__pic-img')
+      .user__info
+        .user__name Алексей Высоцкий
+        .user__desk Личный сайт веб-разработчика
+  .hero__down_btns
+    a(href="#").down-btn
+      +icon('arrow_down', 'down-btn__img')
+  .hero__socials
+    +socials
+    input(type="checkbox")#burger
+    label(for="burger")
+      span
+      span
+      span
+    nav
+      ul
+        li
+          a(href="works.html").title.fullscreen-title мои работы
+        li
+          a(href="about.html").title.fullscreen-title обо мне
+        li
+          a(href="blog.html").title.fullscreen-title блог
+        li
+          a(href="index.html").title.fullscreen-title авторизация
