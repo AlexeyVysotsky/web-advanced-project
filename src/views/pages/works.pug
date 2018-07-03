@@ -9,12 +9,12 @@ block scripts
   
 block content
   include ../common/hero.pug
-
-  .section-title
-    .section-title__triangles
-      +section-triangles("#faf8f0", "#faf8f0")
-    .section-title__head
-      +title('Мои работы', 'portfolio_header')
+  section.work-slider
+    .section-title
+      .section-title__triangles
+        +section-triangles("#faf8f0", "#faf8f0")
+      .section-title__head
+        +title('Мои работы', 'portfolio_header')
 
   .slider-container
     #slider-component

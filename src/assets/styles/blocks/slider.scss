@@ -5,13 +5,12 @@
 }
 
 .slider {
-    height: 100vh;
     min-height: 650px;
     background: #f0efe9;
     display: grid;
     grid-template: "info display" 70% "info buttons" 30% / 1fr 1fr;
     @include tablets {
-        grid-template: "display" 400px "info" 300px "buttons" 255px / 1fr;
+        grid-template: "display" 400px "info" 300px "buttons" 200px / 1fr;
     }
 }
 

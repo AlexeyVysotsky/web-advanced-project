@@ -4,9 +4,9 @@
       .container.footer__container
         .footer__col-left
           ul.footer-menu
-            each item in ['Мои работы', 'Обо мне', "Блок", "Авторизация"]
+            each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html'], ['Авторизация','index.html']]
               li.footer-menu__item
-                a(href="#" class="footer-menu__link") #{item}
+                a(href=`${item[1]}`).menu__link #{item[0]}
         .footer__col-right
           .footer__socials
             +socials('socials_rounded')

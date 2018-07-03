@@ -25,3 +25,6 @@ mixin socials(modificator)
       li.socials__item
         a(href="#").socials__link
           +icon(social, 'socials__icon')
+
+mixin imageLayer(imagePath, imageAlt, imageClass)
+    img(src=`./assets/images/parallax/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)

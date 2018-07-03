@@ -6,10 +6,8 @@
     position: absolute;
     padding: 25px 15px;
     display: flex;
-    flex-direction: column; //text-align: center;
-    //align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    background: url("./assets/images/bg/auth-bg.jpg");
     background-size: cover;
 }
 
@@ -36,13 +34,13 @@
     border-radius: 5px;
     overflow: hidden;
     border: none;
-    background-color: $white;
-    opacity: 0.85;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .welcome__user {
-    padding: 30px 65px;
-    display: flex;align-items: center;
+    padding: 25px 55px;
+    display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
 }
@@ -68,8 +66,10 @@
     border: 1px solid $white;
     border-radius: 5px;
     background: transparent;
+    transition: 0.3s;
     &:hover {
         background: #fff;
         color: $green;
+        transition: 0.3s;
     }
 }

@@ -1,13 +1,39 @@
 extends ../auth.layout.pug
 
 block content
+  .parallax
+    .parallax__item
+        +imageLayer('bg1.png', 'bg', 'parallax__img')
+    .parallax__item
+        +imageLayer('bg2.png', 'bg', 'parallax__img')
+    .parallax__item
+        +imageLayer('cloud5.png', 'bg', 'parallax__img parallax__img-cloud_5')
+    .parallax__item
+        +imageLayer('bg3.png', 'bg', 'parallax__img')
+    .parallax__item
+        +imageLayer('cloud1.png', 'bg', 'parallax__img parallax__img-cloud_1')
+    .parallax__item
+        +imageLayer('bg4.png', 'bg', 'parallax__img')
+    .parallax__item
+        +imageLayer('bg5.png', 'bg', 'parallax__img')
+    .parallax__item
+        +imageLayer('cloud2.png', 'bg', 'parallax__img parallax__img-cloud_2')
+    .parallax__item
+        +imageLayer('bg6.png', 'bg', 'parallax__img')
+    .parallax__item
+        +imageLayer('cloud4.png', 'bg', 'parallax__img parallax__img-cloud_4')
+    .parallax__item
+        +imageLayer('bg7.png', 'bg', 'parallax__img')
+    .parallax__item
+        +imageLayer('cloud3.png', 'bg', 'parallax__img parallax__img-cloud_3')
   .welcome
     .welcome__registration
       .welcome__btn
-        a(href="").auth-button Авторизоваться
-    .welcome__salutation
-      .welcome__content
-        .welcome__user
+        button.auth-button#flip-card-btn-turn-to-back Авторизоваться
+    .flip-card-3D-wrapper
+      #flip-card
+        .flip-card-front
+          .welcome__user
           .user.user--color-dark
               .user__pic
                 +image('./content/user.jpg', 'user pic', 'user__pic-img')
@@ -15,16 +41,59 @@ block content
                 .user__name Алексей Высоцкий
                 .user__info Личный сайт веб разработчика
           .welcome__socials
-            - 
-              var socials = [
-                ['vk', 'https://vk.com'],
-                ['github', 'https://github.com']] 
-            +socials(socials, 'socials--fill-green')
-        .welcome__menu
+            +socials('socials_fill_green')
+          .welcome__menu
           nav.menu
             ul.menu__list.menu__list--welcome-page
               each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html']]
                 li.menu__item.menu__item--border-right
                   a(href=`${item[1]}`).menu__link #{item[0]}
+        .flip-card-back
+          .authtorization
+            .authtorization__title
+              .block-subtitle.title__auth Авторизуйтесь
+            form.form-auth(action="") 
+              .form-auth__edit
+                each item in [['text', 'Логин','form-login','form-auth__input--login'], ['password', 'Пароль', 'form-password', 'form-auth__input--password']]
+                  .form-auth__row
+                    input.form-auth__input(type=`${item[0]}`, placeholder=`${item[1]}`, id=`${item[2]}`, name=`${item[2]}`, class=`${item[3]}`)
+              .form-auth__checks
+                .form-auth__row
+                  label.form-auth-check.form-auth-checkbox
+                    input.form-auth-check__input(type="checkbox", name="capcha")
+                    span.form-auth-check__style
+                    span.form-auth-check__title#human(name="human", value="1") Я человек
+                h5.form-auth__question Вы точно не робот?
+                .form-auth__row  
+                  label.form-auth-check
+                    input.form-auth-check__input(type="radio", name="sure")
+                    span.form-auth-check__style
+                    span.form-auth-check__title#sure-yes(name="sure-yes", value="1") Да
+                  label.form-auth-check
+                    input.form-auth-check__input(type="radio", name="sure")
+                    span.form-auth-check__style
+                    span.form-auth-check__title#sure-no(name="sure-no", value="1") Не уверен                    
+              .form-auth__btn
+                button.form-auth__button.form-auth__button--border-right#flip-card-btn-turn-to-front(type="button") На главную
+                button.form-auth__button(type="submit") Войти
+          button#flip-card-btn-turn-to-front flip
+
+    //- .welcome__salutation
+    //-   .welcome__content
+    //-     .welcome__user
+    //-       .user.user--color-dark
+    //-           .user__pic
+    //-             +image('./content/user.jpg', 'user pic', 'user__pic-img')
+    //-           .user__description
+    //-             .user__name Алексей Высоцкий
+    //-             .user__info Личный сайт веб разработчика
+    //-       .welcome__socials
+    //-         +socials('socials_fill_green')
+    //-     .welcome__menu
+    //-       nav.menu
+    //-         ul.menu__list.menu__list--welcome-page
+    //-           each item in [['Мои работы','works.html'], ['Обо мне', 'about.html'], ['Блог','blog.html']]
+    //-             li.menu__item.menu__item--border-right
+    //-               a(href=`${item[1]}`).menu__link #{item[0]}
     .welcome__copyright
       p &copy; Алексей Высоцкий | Создано с любовью в Loftschool | 2018

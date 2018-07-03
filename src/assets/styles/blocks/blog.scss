@@ -1,16 +1,41 @@
 .blog {
     display: flex;
-    padding: 70px 0 150px;
+    padding-top: 70px;
+    justify-content: center;
+}
+
+.blog__menu {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 33%;
+    @include tablets {
+        position: absolute;
+        display: none;
+    }
+    @include phones {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 100%;
+        bottom: 0;
+        background-color: $green;
+        z-index: 160;
+    }
+}
+
+.blog__menu--swap {
+    position: fixed;
+    left: 0;
+    right: 20%;
+    width: 80%;
 }
 
 .blog__content {
     display: flex;
-}
-
-.title-blog {
-    font-size: 60px;
-}
-
-.blog__content {
-    width: 95%;
+    width: 67%;
+    justify-content: center;
+    @include tablets {
+        width: 100%;
+    }
 }
